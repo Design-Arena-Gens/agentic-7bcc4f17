@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --primary: 230 89% 60%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 260 84% 60%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 215 16% 92%;
+  --muted-foreground: 215 20% 25%;
+  --border: 214.3 31.8% 91.4%;
+}
+
+.dark {
+  --background: 222 47% 7%;
+  --foreground: 210 40% 98%;
+  --card: 222 47% 10%;
+  --card-foreground: 210 40% 98%;
+  --primary: 230 89% 70%;
+  --primary-foreground: 222 47% 7%;
+  --secondary: 260 84% 70%;
+  --secondary-foreground: 222 47% 7%;
+  --muted: 222 47% 14%;
+  --muted-foreground: 215 20% 79%;
+  --border: 217.2 32.6% 17.5%;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+.container-ar {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply bg-card text-card-foreground rounded-xl shadow-card border border-border;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 font-medium transition-all duration-200 outline-none focus:ring-2 focus:ring-primary/30 active:scale-95;
+}
+
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:brightness-110;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground hover:brightness-110;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.25), rgba(255,255,255,0));
+  background-size: 200% 100%;
+}
